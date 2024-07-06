@@ -36,7 +36,7 @@ public class Main {
         number = num.nextInt(100) + 1;
 
         int a;
-
+        int b=0;
         do {
             System.out.println("Please enter your guess: ");
             Scanner sc = new Scanner(System.in);
@@ -44,9 +44,11 @@ public class Main {
             if (a < 1 || a > 100) {
                 System.out.printf("The guess is Out of Range. Try again.%n");
             } else {
+                b++;
                 if (number == a) {
                     System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
                     System.out.println("Congratulations! You guessed the secret number.");
+                    System.out.println("Total Number of Attempts: " + b);
                     System.out.println("System Generated number is :- " + number);
                     System.out.println(a + " is a guessing number.");
                 } else if (a < number) {
